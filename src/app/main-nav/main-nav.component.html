@@ -8,8 +8,8 @@
     [opened]="!(isHandset | async)!.matches">
     <mat-toolbar color="primary">Menu</mat-toolbar>
     <mat-nav-list>
-      <a download="SafariDownloadProblem.pdf" href mat-list-item (click)="downloadFilePost()">Download current way (POST)</a>
-      <a download="SafariDownloadProblem.pdf" href mat-list-item (click)="downloadFileGet()">Download current way (GET)</a>
+      <a download="SafariDownloadProblem.pdf" mat-list-item (click)="downloadFilePost()">Download current way (POST)</a>
+      <a download="SafariDownloadProblem.pdf" mat-list-item (click)="downloadFileGet()">Download current way (GET)</a>
       <a download="SafariDownloadProblem.pdf" href="" mat-list-item>Download via href (GET)</a>
     </mat-nav-list>
   </mat-sidenav>
