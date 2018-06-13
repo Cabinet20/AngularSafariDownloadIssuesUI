@@ -10,7 +10,7 @@ import * as FileSaver from 'file-saver';
       <li><a download="SafariDownloadProblem1.pdf" (click)="downloadFilePost()">Download current way (POST)</a></li>
       <li><a download="SafariDownloadProblem2.pdf" (click)="downloadFileGet()">Download current way (GET)</a></li>
       <li><a download="SafariDownloadProblem3.pdf" href="http://safaridownloadissue-api.azurewebsites.net/api/download/" >
-      Download via href (GET)</a></li>
+      Download via href</a></li>
     </ul>
   `,
   styles: []
