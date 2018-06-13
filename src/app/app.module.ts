@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import {
   MatToolbarModule,
@@ -17,7 +16,6 @@ import {
   MatCardModule,
   MatMenuModule
 } from '@angular/material';
-import { MainBodyComponent } from './main-body/main-body.component';
 import { HttpModule, RequestOptions, Http, ConnectionBackend, Request, XHRBackend } from '@angular/http';
 import { RouterModule, Router } from '@angular/router';
 import { AuthInterceptor } from './auth/auth.interceptor';
@@ -25,8 +23,6 @@ import { AuthInterceptor } from './auth/auth.interceptor';
 @NgModule({
   declarations: [
     AppComponent,
-    MainNavComponent,
-    MainBodyComponent
   ],
   imports: [
     BrowserModule,
