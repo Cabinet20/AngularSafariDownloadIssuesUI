@@ -18,6 +18,9 @@ import {
   MatMenuModule
 } from '@angular/material';
 import { MainBodyComponent } from './main-body/main-body.component';
+import { HttpModule, RequestOptions, Http, ConnectionBackend, Request, XHRBackend } from '@angular/http';
+import { RouterModule, Router } from '@angular/router';
+import { AuthInterceptor } from './auth/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -39,7 +42,18 @@ import { MainBodyComponent } from './main-body/main-body.component';
     MatCardModule,
     MatMenuModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: Http,
+      useFactory: Interceptor,
+      deps: [XHRBackend, RequestOptions, Router]
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
+export function Interceptor(xhrBackend: XHRBackend, requestOptions: RequestOptions, router: Router) {
+  return new AuthInterceptor(xhrBackend, requestOptions, router);
+}
