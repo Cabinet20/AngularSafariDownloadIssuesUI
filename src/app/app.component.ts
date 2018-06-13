@@ -4,13 +4,14 @@ import * as FileSaver from 'file-saver';
 @Component({
   selector: 'app-root',
   template: `
-    <main-nav>
-    </main-nav>
-    
-    <a download="SafariDownloadProblem1.pdf" (click)="downloadFilePost()">Download current way (POST)</a>
-    <a download="SafariDownloadProblem2.pdf" (click)="downloadFileGet()">Download current way (GET)</a>
-    <a download="SafariDownloadProblem3.pdf" href="http://safaridownloadissue-api.azurewebsites.net/api/download/" >
-    Download via href (GET)</a>
+    <!--main-nav>
+    </main-nav-->
+    <ul>
+      <li><a download="SafariDownloadProblem1.pdf" (click)="downloadFilePost()">Download current way (POST)</a></li>
+      <li><a download="SafariDownloadProblem2.pdf" (click)="downloadFileGet()">Download current way (GET)</a></li>
+      <li><a download="SafariDownloadProblem3.pdf" href="http://safaridownloadissue-api.azurewebsites.net/api/download/" >
+      Download via href (GET)</a></li>
+    </ul>
   `,
   styles: []
 })
