@@ -5,7 +5,6 @@ import { Component } from '@angular/core';
   template: `
     <main-nav>
     </main-nav>
-    <main-body></main-body>
   `,
   styles: []
 })
